@@ -70,11 +70,8 @@ Build Environment Installation Steps
     This is free software; see the source for copying conditions.  There is NO
     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 		```
-
----------------------- The setup below is not complete...   I'll get it working by next week ------------------------------
-
 - Build the SDK and examples dir.  This may require additional software installs...  The compiler install is below.
-    - ```cd ../pico-examples```
+    - ```cd .../src/pico/pico-examples```
 	- ```git submodule update --init```  
 	- ```cmake .```
 	- ```make```
