@@ -1,0 +1,110 @@
+miller@goliath:[~/src/cs466_s24/lab1/build] (main)
+$ cmake ..
+-- Include pico_sdk_import.cmake
+Using PICO_SDK_PATH from environment ('/home2/miller/src/pico/pico-sdk')
+PICO_SDK_PATH is /home2/miller/src/pico/pico-sdk
+Defaulting PICO_PLATFORM to rp2040 since not specified.
+Defaulting PICO platform compiler to pico_arm_gcc since not specified.
+-- Defaulting build type to 'Release' since not specified.
+PICO compiler is pico_arm_gcc
+-- Includes Complete
+--     gcc = 
+--     g++ = 
+--     as = 
+-- The C compiler identification is GNU 9.2.1
+-- The CXX compiler identification is GNU 9.2.1
+-- The ASM compiler identification is GNU
+-- Found assembler: /home2/miller/bin/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
+-- Initialize the SDK
+Defaulting PICO target board to pico since not specified.
+Using board configuration from /home2/miller/src/pico/pico-sdk/src/boards/include/boards/pico.h
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.13") found components: Interpreter 
+TinyUSB available at /home2/miller/src/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040; enabling build support for USB.
+-- Initialize complete
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home2/miller/src/cs466_s24/lab1/build
+miller@goliath:[~/src/cs466_s24/lab1/build] (main)
+$ make
+[  1%] Creating directories for 'ELF2UF2Build'
+[  3%] No download step for 'ELF2UF2Build'
+[  5%] No update step for 'ELF2UF2Build'
+[  6%] No patch step for 'ELF2UF2Build'
+[  8%] Building ASM object pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+[ 10%] Performing configure step for 'ELF2UF2Build'
+[ 11%] Linking ASM executable bs2_default.elf
+[ 11%] Built target bs2_default
+[ 13%] Generating bs2_default.bin
+[ 15%] Generating bs2_default_padded_checksummed.S
+-- The C compiler identification is GNU 9.4.0
+[ 15%] Built target bs2_default_padded_checksummed_asm
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home2/miller/src/cs466_s24/lab1/build/elf2uf2
+[ 16%] Performing build step for 'ELF2UF2Build'
+[ 50%] Building CXX object CMakeFiles/elf2uf2.dir/main.cpp.o
+[100%] Linking CXX executable elf2uf2
+[100%] Built target elf2uf2
+[ 18%] No install step for 'ELF2UF2Build'
+[ 20%] Completed 'ELF2UF2Build'
+[ 20%] Built target ELF2UF2Build
+[ 22%] Building C object CMakeFiles/lab1.dir/lab1.c.obj
+[ 23%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+[ 25%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+[ 27%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+[ 28%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+[ 30%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+[ 32%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+[ 33%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+[ 35%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/common/pico_time/time.c.obj
+[ 37%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+[ 38%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+[ 40%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+[ 44%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+[ 44%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+[ 45%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+[ 49%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+[ 49%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+[ 52%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+[ 52%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/common/pico_util/queue.c.obj
+[ 54%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+[ 55%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+[ 57%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+[ 59%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+[ 61%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+[ 62%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+[ 64%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+[ 66%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+[ 67%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+[ 69%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+[ 71%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+[ 72%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+[ 74%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+[ 76%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+[ 77%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+[ 79%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+[ 81%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+[ 83%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+[ 84%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+[ 86%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+[ 88%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+[ 89%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+[ 91%] Building ASM object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+[ 93%] Building CXX object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+[ 94%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+[ 96%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+[ 98%] Building C object CMakeFiles/lab1.dir/home2/miller/src/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+[100%] Linking CXX executable lab1.elf
+[100%] Built target lab1
+
