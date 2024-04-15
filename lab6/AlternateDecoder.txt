@@ -1,0 +1,48 @@
+I prefer the state machine approach but it requires the author to 
+generate a fair amount of code to implement the state machine. 
+In the end the actual code path through the state machine is quite 
+thin and remains efficient.
+
+A second technique is a little more mathy (if that's a word) and 
+uses a lookup table.
+
+If you create a two bit number with PHB and PHA as 
+(assuming PHA and PHB in [0-1])
+uint8_t currentState = (PHB*(1<<1)) | (PHA*(1<<0))
+
+Like the state machine you are interested in the transition from 
+any one state to any other.  To implement this path you can 
+save the priorState before the above assignment is made or 
+priorState = currentState;
+
+Then we have a numeric rendition of state variable that the state 
+machine method is based upon.
+
+Construct a 4 bit value 
+
+uint8_t transition = ((priorState << 2) | currentState) & 0x0f;
+
+Interestingly the 'transition' will always be between 0 and 15 and 
+can be used as the base of an array.
+
+static int8_t lookup[] = {<you get to figure this out>};
+
+Then similar to the state machine method you can use the 
+following to calculate positon in your ISR.
+
+if (transition == -1){
+    // An error has occurred or you are going too fast.
+} else {
+    position += lookup[transaction];
+}
+
+Remember that a prior->current value of;
+    b0000 would indicate no movement {0}
+    b0001 would indicate a positive Increment {1}
+    b0010 would indicate a negative increment {-1}
+    b0011 would be an error {-99}
+    etc...
+
+
+
+
